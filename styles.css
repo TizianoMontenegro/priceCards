@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    margin: 0; 
+    background-color: #33a;
+}
+.price-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.price-card-container .price-card{
+    background-color: #fff;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    box-shadow: 0 0 5px #000;
+}
+.price-card-container .price-card .checks ul{
+    list-style: none;
+    padding: 0;
+}
+.price-card:first-child{border-radius: 10px 0 0 10px;}
+.price-card:last-child{border-radius: 0 10px 10px 0;}
+.price-card-container .price-card.selected{
+    height: 550px;
+    box-shadow: 0 0 20px #000;
+    border-radius: 10px;
+    z-index: 50;
+}
+.price-card .title h2{
+    margin-top: 0;
+    font-size: 1.2em;
+}
+.price-card .price p{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .1em;
+}
+.price-card .price .span-currency{font-size: 1.6em;}
+.price-card .price .span-price{font-size: 3em;}
+.price-card .price .span-time{color: #888;}
+.price-card .checks{
+    width: 100%;
+    padding-left: 1em;
+}
+.price-card p{font-weight: 600;}
+.price-card .checks .check{
+    background-color: #0a0;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    padding: .1em .4em .1em .1em;
+    margin-right: .5em;
+}
+.price-card .button{
+    margin-top: 2em;
+    font-size: .9em;
+    font-weight: 600;
+    width: 85%;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #888;
+    color: #888;
+    transition: background-color .5s, color .5s;
+}
+.price-card .button:hover{
+    background-color: #00a;
+    color: #fff;
+}
+.price-card .button.selected-button{
+    background-color: #22f;
+    color: #fff;
+    border: none;
+}
+.price-card .button.selected-button:hover{
+    background-color: #00a;
+    color: #fff;
+}
